@@ -5,6 +5,7 @@ import Vue from 'vue'
 import 'font-awesome/css/font-awesome.min.css'
 import '@/css/app.css'
 import ElementUI from 'element-ui'
+import 'element-theme-default'
 import locale from 'element-ui/lib/locale/lang/en'
 
 import App from './App'

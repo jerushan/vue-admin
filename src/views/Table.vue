@@ -120,7 +120,7 @@
               :filters="[{ text: 'Home', value: 'Home' }, { text: 'Office', value: 'Office' }]"
               :filter-method="filterTag"
               filter-placement="bottom-end">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <el-tag :type="scope.row.tag === 'Home' ? 'primary' : 'success'" close-transition>{{scope.row.tag}}</el-tag>
               </template>
             </el-table-column>
@@ -133,13 +133,13 @@
           <div slot="header">Custom column template</div>
           <el-table :data="tableData">
             <el-table-column label="Date" width="160">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <el-icon name="time"></el-icon>
                 <span style="margin-left: 10px">{{ scope.row.date }}</span>
               </template>
             </el-table-column>
             <el-table-column label="Name" width="140">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <el-popover trigger="hover" placement="top">
                   <p>Name: {{ scope.row.name }}</p>
                   <p>Addr: {{ scope.row.address }}</p>
@@ -150,7 +150,7 @@
               </template>
             </el-table-column>
             <el-table-column label="Operations">
-              <template scope="scope">
+              <template slot-scope="scope">
                 <el-button size="small">Edit</el-button>
                 <el-button size="small" type="danger">Delete</el-button>
               </template>
@@ -185,7 +185,7 @@
           <div slot="header">Expandable row</div>
           <el-table :data="tableData2">
             <el-table-column type="expand">
-              <template scope="props">
+              <template slot-scope="props">
                 <p>State: {{ props.row.state }}</p>
                 <p>City: {{ props.row.city }}</p>
                 <p>Address: {{ props.row.address }}</p>

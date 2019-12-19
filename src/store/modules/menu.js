@@ -24,6 +24,13 @@ function getList($route) {
       name: 'dashboard',
       icon: 'fa fa fa-dashboard'
     }, {
+      name: 'students',
+      icon: 'fa fa-briefcase',
+      children: [{
+        values: [{name: 'add'}, {name: 'all'}, {name: 'input'}]
+      }]
+    },
+    {
       name: 'ui-elements',
       icon: 'fa fa-briefcase',
       children: [{

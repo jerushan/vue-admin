@@ -18,7 +18,40 @@ export default new Router({
           label: 'Dashboard'
         },
         component: resolve => require(['@/views/Dashboard'], resolve)
-      }, {
+      },
+      {
+        path: 'students',
+        name: 'students',
+        meta: {
+          label: 'Students'
+        },
+        component: { render(c) { return c('router-view') } },
+        children: [{
+          path: 'add',
+          name: 'add',
+          meta: {
+            label: 'Add'
+          },
+          component: resolve => require(['@/views/Student/Add'], resolve)
+        },
+        {
+          path: 'all',
+          name: 'all',
+          meta: {
+            label: 'All'
+          },
+          component: resolve => require(['@/views/Student/All'], resolve)
+        },
+        {
+          path: 'add',
+          name: 'add',
+          meta: {
+            label: 'Add'
+          },
+          component: resolve => require(['@/views/Radio'], resolve)
+        }]
+      },
+      {
         path: 'ui-elements',
         name: 'ui-elements',
         meta: {
